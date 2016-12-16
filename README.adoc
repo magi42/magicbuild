@@ -1,0 +1,63 @@
+= MagiCBuild
+Marko Grönroos <magi@iki.fi>
+
+MagiCBuild is a build framework that provides high-level functionality for compiling a software product from source code.
+It is based on GNU Make and consists of a framework of makefiles.
+
+The most important feature of MagiCBuild is that all output and intermediate files are written to an output directory tree that is totally separate from source code tree.
+This helps keep the source tree completely clean from trash such as object files and executables.
+After compilation, the executable binaries, libraries, headers, shared files, and documentation can be "installed" from the output directory to actual installation directory hierarchy.
+
+See the <<docs/magicbuild-usersguide.pdf, "MagiCBuild User's Guide">> (PDF) for detailed description and instructions.
+
+MagiCBuild contains a configuration tool, `configure`, that can be used to automatically detect relevant features of the platform such as availability and version numbers of required software packages, output and installation directories, and machine architecture.
+The configuration tool is a shell script, which makes extending its functionality very easy.
+The basic usage of the configuration tool is compatible with GNU Autoconf.
+This similarity makes its use easy for open source software developers.
+
+An example of using the configuration and build system is provided in the `test` subdirectory of the MagiCBuild distribution package.
+
+Features
+
+* Compiling C++ applications
+* Compilation output tree separate from source tree
+* Building reference documentation with Doxygen
+* Installing and uninstalling
+* Cleaning up the output directory
+* Creation of source code distribution packages
+* Configuration tool with GNU Autoconf compatibility
+
+Limitations
+
+* No installation to system directories
+* Only GNU/Linux platform currently supported
+* Only C++ compilation currently supported with gcc
+
+For a more complete list of limitations, see the chapter _Known bugs and limitations_ in
+the User's Guide.
+
+== System Requirements
+
+MagiCBuild currently has the following system requirements:
+
+* GNU/Linux operating system
+* GNU Make 3.79.1 or newer
+* Doxygen (optional)
+
+Platforms
+
+The following Linux distributions have been tested:
+
+* Red Hat Linux 9
+* Mandrake 9.1
+* Debian 2.2 + upgrades
+
+== License
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Library General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Library General Public License for more details.
+
+You should have received a copy of the GNU Library General Public License along with this library; see the file COPYING.LIB.
+If not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
