@@ -8,7 +8,7 @@ The most important feature of MagiCBuild is that all output and intermediate fil
 This helps keep the source tree completely clean from trash such as object files and executables.
 After compilation, the executable binaries, libraries, headers, shared files, and documentation can be "installed" from the output directory to actual installation directory hierarchy.
 
-See the <<docs/magicbuild-usersguide.pdf, "MagiCBuild User's Guide">> (PDF) for detailed description and instructions.
+See the file::docs/magicbuild-usersguide.pdf[MagiCBuild User's Guide] (PDF) for detailed description and instructions.
 
 MagiCBuild contains a configuration tool, `configure`, that can be used to automatically detect relevant features of the platform such as availability and version numbers of required software packages, output and installation directories, and machine architecture.
 The configuration tool is a shell script, which makes extending its functionality very easy.
